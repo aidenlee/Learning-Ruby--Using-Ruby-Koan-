@@ -24,7 +24,7 @@ class AboutBlocks < EdgeCase::Koan
 
   def test_blocks_can_take_arguments
     result = method_with_block_arguments do |argument|
-      assert_equal __, argument
+      assert_equal "Jim", argument
     end
   end
 
@@ -40,7 +40,7 @@ class AboutBlocks < EdgeCase::Koan
   def test_methods_can_call_yield_many_times
     result = []
     many_yields { |item| result << item }
-    assert_equal __, result
+    assert_equal [:peanut, :butter, :and, :jelly], result
   end
 
   # ------------------------------------------------------------------
